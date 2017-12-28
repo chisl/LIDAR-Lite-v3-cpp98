@@ -32,7 +32,7 @@ public:
 	
 	/*
 	 * REG ACQ_COMMAND:
-	 * Faster distance measurements can be performed by omitting the receiver bias correction routine. Measurement accuracy and sensitivity are adversely affected if conditions change (e.g. target distance, device temperature, and optical noise). To achieve good performance at high measurement rates receiver bias correction must be performed periodically. The recommended method is to do so at the beginning of every 100 sequential measurement commands. 
+	 * Faster distance measurements can be performed by omitting the receiver bias correction routine. Measurement accuracy and sensitivity are adversely affected if conditions change (e.g. target distance, device temperature, and optical noise). To achieve good performance at high measurement rates receiver bias correction must be performed periodically. The recommended method is to do so at the beginning of every 100 sequential measurement commands.
 	 */
 	struct ACQ_COMMAND
 	{
@@ -69,7 +69,7 @@ public:
 	
 	/*
 	 * REG STATUS:
-	 * System status 
+	 * System status
 	 */
 	struct STATUS
 	{
@@ -152,7 +152,7 @@ public:
 	
 	/*
 	 * REG SIG_COUNT_VAL:
-	 * Maximum acquisition count 
+	 * Maximum acquisition count
 	 */
 	struct SIG_COUNT_VAL
 	{
@@ -188,7 +188,7 @@ public:
 	
 	/*
 	 * REG ACQ_CONFIG_REG:
-	 * Acquisition mode control 
+	 * Acquisition mode control
 	 */
 	struct ACQ_CONFIG_REG
 	{
@@ -272,7 +272,7 @@ public:
 	
 	/*
 	 * REG VELOCITY:
-	 * Velocity measurement output 
+	 * Velocity measurement output
 	 */
 	struct VELOCITY
 	{
@@ -307,7 +307,7 @@ public:
 	
 	/*
 	 * REG PEAK_CORR:
-	 * Peak value in correlation record 
+	 * Peak value in correlation record
 	 */
 	struct PEAK_CORR
 	{
@@ -342,7 +342,7 @@ public:
 	
 	/*
 	 * REG NOISE_PEAK:
-	 * Correlation record noise floor 
+	 * Correlation record noise floor
 	 */
 	struct NOISE_PEAK
 	{
@@ -377,7 +377,7 @@ public:
 	
 	/*
 	 * REG SIGNAL_STRENGTH:
-	 * Received signal strength 
+	 * Received signal strength
 	 */
 	struct SIGNAL_STRENGTH
 	{
@@ -412,7 +412,7 @@ public:
 	
 	/*
 	 * REG FULL_DELAY:
-	 * Distance measurement high and low byte 
+	 * Distance measurement high and low byte
 	 */
 	struct FULL_DELAY
 	{
@@ -447,7 +447,7 @@ public:
 	
 	/*
 	 * REG OUTER_LOOP_COUNT:
-	 * Burst measurement count control 
+	 * Burst measurement count control
 	 */
 	struct OUTER_LOOP_COUNT
 	{
@@ -456,9 +456,9 @@ public:
 		/* Bits Value: */
 		/*
 		 * 0x00-0x01: One measurement per distance measurement command.
-		 *           0x02-0xfe: Repetition count per distance measurement command.
-		 *           0xff: Indefinite repetitions after initial distance measurement command.
-		 *           See ACQ_CONFIG_REG (0x04) and MEASURE_DELAY (0x45) for non- default automatic repetition delays. 
+		 * 0x02-0xfe: Repetition count per distance measurement command.
+		 * 0xff: Indefinite repetitions after initial distance measurement command.
+		 * See ACQ_CONFIG_REG (0x04) and MEASURE_DELAY (0x45) for non- default automatic repetition delays.
 		 */
 		struct Value
 		{
@@ -488,7 +488,7 @@ public:
 	
 	/*
 	 * REG REF_COUNT_VAL:
-	 * Reference acquisition count 
+	 * Reference acquisition count
 	 */
 	struct REF_COUNT_VAL
 	{
@@ -524,7 +524,7 @@ public:
 	
 	/*
 	 * REG LAST_DELAY_HIGH:
-	 * Previous distance measurement high byte 
+	 * Previous distance measurement high byte
 	 */
 	struct LAST_DELAY_HIGH
 	{
@@ -559,7 +559,7 @@ public:
 	
 	/*
 	 * REG LAST_DELAY_LOW:
-	 * Previous distance measurement low byte 
+	 * Previous distance measurement low byte
 	 */
 	struct LAST_DELAY_LOW
 	{
@@ -594,7 +594,7 @@ public:
 	
 	/*
 	 * REG UNIT_ID_HIGH:
-	 * Serial number high byte 
+	 * Serial number high byte
 	 */
 	struct UNIT_ID_HIGH
 	{
@@ -629,7 +629,7 @@ public:
 	
 	/*
 	 * REG UNIT_ID_LOW:
-	 * Serial number low byte 
+	 * Serial number low byte
 	 */
 	struct UNIT_ID_LOW
 	{
@@ -664,7 +664,7 @@ public:
 	
 	/*
 	 * REG I2C_ID_HIGH:
-	 * Write serial number high byte for I2C address unlock 
+	 * Write serial number high byte for I2C address unlock
 	 */
 	struct I2C_ID_HIGH
 	{
@@ -699,7 +699,7 @@ public:
 	
 	/*
 	 * REG I2C_ID_LOW:
-	 * Write serial number low byte for I2C address unlock 
+	 * Write serial number low byte for I2C address unlock
 	 */
 	struct I2C_ID_LOW
 	{
@@ -734,7 +734,7 @@ public:
 	
 	/*
 	 * REG I2C_SEC_ADDR:
-	 * Write new I2C address after unlock 
+	 * Write new I2C address after unlock
 	 */
 	struct I2C_SEC_ADDR
 	{
@@ -743,8 +743,8 @@ public:
 		/* Bits Value: */
 		/*
 		 * Non-default I2C address.
-		 *           Available addresses are 7-bit values with a ‘0’ in the least signi cant bit (even hexadecimal numbers).
-		 *           I2C_ID_HIGH (0x18) and I2C_ID_LOW (0x19) must have the correct value for the device to respond to the non-default I2C address. 
+		 * Available addresses are 7-bit values with a ‘0’ in the least signi cant bit (even hexadecimal numbers).
+		 * I2C_ID_HIGH (0x18) and I2C_ID_LOW (0x19) must have the correct value for the device to respond to the non-default I2C address.
 		 */
 		struct Value
 		{
@@ -773,12 +773,12 @@ public:
 	
 	/*
 	 * REG THRESHOLD_BYPASS:
-	 * Peak detection threshold bypass 
+	 * Peak detection threshold bypass
 	 * The default valid measurement detection algorithm is based on the peak value,
-	 *       signal strength, and noise in the correlation record. This can be overridden
-	 *       to become a simple threshold criterion by setting a non-zero value. Recommended
-	 *       non-default values are 0x20 for higher sensitivity with more frequent erroneous
-	 *       measurements, and 0x60 for reduced sensitivity and fewer erroneous measurements. 
+	 * signal strength, and noise in the correlation record. This can be overridden
+	 * to become a simple threshold criterion by setting a non-zero value. Recommended
+	 * non-default values are 0x20 for higher sensitivity with more frequent erroneous
+	 * measurements, and 0x60 for reduced sensitivity and fewer erroneous measurements.
 	 */
 	struct THRESHOLD_BYPASS
 	{
@@ -787,7 +787,7 @@ public:
 		/* Bits Value: */
 		/*
 		 * 0x01-0xff: Set simple threshold for valid measurement detection.
-		 *           Values 0x20-0x60 generally perform well. 
+		 * Values 0x20-0x60 generally perform well.
 		 */
 		struct Value
 		{
@@ -818,7 +818,7 @@ public:
 	
 	/*
 	 * REG I2C_CONFIG:
-	 * Default address response control 
+	 * Default address response control
 	 */
 	struct I2C_CONFIG
 	{
@@ -855,7 +855,7 @@ public:
 	
 	/*
 	 * REG COMMAND:
-	 * State command 
+	 * State command
 	 */
 	struct COMMAND
 	{
@@ -864,7 +864,7 @@ public:
 		/* Bits TestMode: */
 		/*
 		 * Select correlation memory bank in ACQ_SETTINGS (0x5d) prior to enabling test mode.
-		 *           Once test mode is enabled, read CORR_DATA (0x52) and CORR_DATA_ SIGN (0x53) in one transaction (read from 0xd2). The memory index is incremented automatically and successive reads produce sequential data. 
+		 * Once test mode is enabled, read CORR_DATA (0x52) and CORR_DATA_ SIGN (0x53) in one transaction (read from 0xd2). The memory index is incremented automatically and successive reads produce sequential data.
 		 */
 		struct TestMode
 		{
@@ -895,7 +895,7 @@ public:
 	
 	/*
 	 * REG MEASURE_DELAY:
-	 * Delay between automatic measurements 
+	 * Delay between automatic measurements
 	 */
 	struct MEASURE_DELAY
 	{
@@ -931,7 +931,7 @@ public:
 	
 	/*
 	 * REG PEAK_BCK:
-	 * Second largest peak value in correlation record 
+	 * Second largest peak value in correlation record
 	 */
 	struct PEAK_BCK
 	{
@@ -966,7 +966,7 @@ public:
 	
 	/*
 	 * REG CORR_DATA:
-	 * Correlation record data low byte 
+	 * Correlation record data low byte
 	 */
 	struct CORR_DATA
 	{
@@ -1001,7 +1001,7 @@ public:
 	
 	/*
 	 * REG CORR_DATA_SIGN:
-	 * Correlation record data high byte 
+	 * Correlation record data high byte
 	 */
 	struct CORR_DATA_SIGN
 	{
@@ -1036,7 +1036,7 @@ public:
 	
 	/*
 	 * REG ACQ_SETTINGS:
-	 * Correlation record memory bank select 
+	 * Correlation record memory bank select
 	 */
 	struct ACQ_SETTINGS
 	{
@@ -1071,7 +1071,7 @@ public:
 	
 	/*
 	 * REG POWER_CONTROL:
-	 * Power state control 
+	 * Power state control
 	 */
 	struct POWER_CONTROL
 	{
